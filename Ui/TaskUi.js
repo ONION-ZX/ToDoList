@@ -113,6 +113,7 @@ function detect_click_list() {
 }
 
 function remove(id) {
+  console.log(1);
   this._api.remove(id);
   this.render();
 }
