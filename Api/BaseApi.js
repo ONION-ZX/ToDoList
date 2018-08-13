@@ -73,7 +73,9 @@ function find_index_by_id(arr, id) {
 
 function find_by_id(arr, id) {
   return arr.find(function (row) {
-    return row.id == id;
+    if(row.id == id) {
+      return row;
+    }
   });
 }
 

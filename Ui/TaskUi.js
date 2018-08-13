@@ -91,16 +91,13 @@ function detect_click_list() {
   this.list.addEventListener('click', function (e) {
     var target = e.target
       , todo_item = target.closest('.todo-item')
-      , id
+      , id = todo_item ? todo_item.dataset.id : null
       , is_remove_btn = target.classList.contains('remove')
       , is_update_btn = target.classList.contains('update')
       , is_checkbox = target.classList.contains('checker')
       , row = me._api.$find(id)
-    ;
-
-    if(todo_item)
-      id = todo_item.dataset.id;
-
+      ;
+  console.log(row);    
     if (is_remove_btn) {
       me.remove(id);
     } else if (is_update_btn) {
