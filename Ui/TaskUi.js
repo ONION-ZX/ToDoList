@@ -97,10 +97,10 @@ function detect_click_list() {
       , is_checkbox = target.classList.contains('checker')
       , row = me._api.$find(id)
       ;
-  console.log(row);    
     if (is_remove_btn) {
       me.remove(id);
     } else if (is_update_btn) {
+      console.log(1);
       me.set_form_data(me.form, row);
     } else if(is_checkbox) {
       me._api.set_completed(id, target.checked);
@@ -113,7 +113,6 @@ function detect_click_list() {
 }
 
 function remove(id) {
-  console.log(1);
   this._api.remove(id);
   this.render();
 }
